@@ -59,3 +59,29 @@ tr:nth-child(even) {
   width: 100%;
   display: block;
 }
+
+.feature-shortcut {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+  justify-content: center;
+}
+
+.shortcut-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #222;
+  background: #fafafa;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.index-shortcut:hover {
+  background: #f0f0f0;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}

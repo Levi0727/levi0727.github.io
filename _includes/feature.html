@@ -1,7 +1,9 @@
-<div class="feature">
+{% assign slug = include.title | downcase | replace: ' ', '-' | replace: '.', '' %}
+
+<div id="{{ slug }}" class="feature">
     <div class="text">
-        <h3>{{ include.title }}</h3>
-        <p>{{ include.description }}</p>
+        <h3>{{ include.icon }} {{ include.title }}</h3>
+        <p>{{ include.description | markdownify }}</p>
     </div>
     {% for img in include.images %}
     <div class="images">

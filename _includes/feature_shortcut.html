@@ -1,0 +1,8 @@
+<div class="feature-shortcut">
+    {% for item in include.features %}
+    {% assign slug = item.title | downcase | replace: ' ', '-' | replace: '.', '' %}
+    <a href="#{{ slug }}" class="shortcut-link">
+        <span>{{ item.icon }} {{ item.title }}</span>
+    </a>
+    {% endfor %}
+</div>

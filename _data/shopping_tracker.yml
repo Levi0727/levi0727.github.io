@@ -1,71 +1,251 @@
 - title: "Authentication"
-  description: ""
+  icon: "🔑"
+  description: >
+    The application supports three authentication methods: guest access, email + password, and Google Auth.
+
+
+    With **guest authentication**, users can explore the basic features of the app, including shopping lists and storage management. 
+    However, guest users cannot share or be invited to households, nor can they access premium features like 
+    recipe generation, product submission, and in-app notifications.
+
+
+    Guests have the option to delete their account or upgrade to a full account 
+    by registering with an email + password or linking a Google account.
+
   images:
     - "/assets/shopping_tracker/login.png"
     - "/assets/shopping_tracker/register.png"
 
 - title: "Shopping List"
-  description: ""
+  icon: "🛒"
+  description: >
+    Shopping List is the first of three main screens accessible via the bottom navigation. 
+    This screen allows users to view their items in two distinct sections:
+      - **To buy**:
+        - Displays items yet to be purchased.
+        - Tapping an item moves it to the "Bought" section.
+        - Items can be deleted using the trash icon.
+      - **Bought**:
+        - Shows items that have already been purchased.
+        - The trash icon deletes the item.
+        - The right arrow icon navigates to a screen where the user can optionally 
+          set an expiration date by scanning the barcode or using a date picker.
+
+    This separation helps keep the interface clear and transparent. 
+    Users can toggle between sections using the button at the end of the header row.
+
+    To add items, users can tap the **add button** in the bottom-right corner. Two options will appear:
+
+      1. The first opens a **dialog** where users can quickly set a name and an optional quantity for the product.
+
+      2. The second opens the **Add Shopping Item screen**, as shown in the image. 
+         Here, users can explicitly specify the item they want to add by searching for it or scanning the barcode.
+
   images:
     - "/assets/shopping_tracker/shopping_list.png"
     - "/assets/shopping_tracker/shopping_create.png"
 
 - title: "Storage"
-  description: ""
+  icon: "🧺"
+  description: >
+    **Storage List** is the screen where users can view all the items they have added to the household. 
+    Items are **organized into sections** based on product categories.
+
+
+    Next to each section name, there may be an icon indicating the expiration status of the items in that section:
+      - **Warning**: At least one item in the section will expire in 3 days.
+      - **Error**: At least one item in the section has already expired.
+
+    **Items can be sorted** by name or expiration date, in either ascending or descending order, using the action bar at the top of the screen. 
+    This bar also includes buttons for opening the **charts** and adding a **new storage item**. 
+    The floating action button at the bottom center navigates to the **recipe generator screen**.
+
+
+    Actions available on the item cards:
+      - **Tap**: Opens the item details, where you can edit it.
+      - **Shopping cart button**: Quickly adds the item to the shopping list.
+      - **Swipe left-to-right**: Deletes the item.
+      - **Swipe right-to-left**: Adds the item to the shopping list and deletes it.
+      - **Alarm button**: Set a custom reminder for the item, which will send a push notification. *(in development)*
+
   images:
     - "/assets/shopping_tracker/storage_list.png"
     - "/assets/shopping_tracker/storage_swipe.gif"
 
 - title: "Scanning"
-  description: ""
+  icon: "🔍"
+  description: >
+    **Scanning** barcodes and expiration dates can be done in multiple places throughout the app, 
+    making it quicker and easier to add new items. 
+    These features are accessible via the **scan icon** on the corresponding screens.
+
+
+    When scanning, a **camera preview** is opened, allowing the user to capture the barcode or expiration date. 
+    Below the preview, the results are displayed in a list, from which the user can select the correct one. 
+    This step is necessary due to the potential uncertainty of image scanning.
+
+
+    The first image shows the layout of the **barcode scanning screen**. 
+    In the GIF next to it, you can see the **Move item to storage screen**, where the **scan button** 
+    for the expiration date is located next to the date picker.
+
   images:
     - "/assets/shopping_tracker/scan_barcode.png"
     - "/assets/shopping_tracker/scan_expiration.gif"
 
 - title: "Charts"
-  description: ""
+  icon: "📊"
+  description: >
+    **Charts** provide a visual representation of the current state of the storage, helping users gain insights at a glance.
+
+      - The **pie chart** displays items grouped by category, with each segment representing the items in a specific section.
+      - The **stacked bar chart** shows items grouped by expiration intervals and categories. 
+        The columns represent the following **intervals**, and only those with at least one item are displayed:
+        - Not set
+        - Expired
+        - Expires in 1-3 days
+        - Expires in 4-7 days
+        - Expires in 8-14 days
+        - Expires in 15-30 days
+        - More than 30 days
+
+    **Tapping and holding a section** of the pie chart or a column of the bar chart will display the label of the group, 
+    as well as the number of items by category within that section or column. 
+    This can be seen on the image containing the bar chart.
+
   images:
     - "/assets/shopping_tracker/charts_category.png"
     - "/assets/shopping_tracker/charts_expiration.png"
 
 - title: "Recipe Generator"
-  description: ""
+  icon: "🍳"
+  description: >
+    The Recipe Generator uses **Gemini AI to create recipes** that are guaranteed to include at least one 
+    selected item from the user's storage, while also allowing for the inclusion of other ingredients.
+
+
+    Users can **select the item to include** using a search bar, and the selected item will be displayed as shown in the first image. 
+    In addition to the ingredient, users can also **select the type of dish** they want to prepare.
+
+
+    The generated recipe includes a name, an ingredient list, and preparation steps. 
+    Next to each ingredient, an **icon indicates whether the ingredient is available** in the user's storage, 
+    making it easier to see which ingredients they already have for the dish.
+
+
+    This feature helps users **discover new dishes** and encourages them to **use items** from their storage **that are expiring soon**.
+
   images:
     - "/assets/shopping_tracker/recipe_gen_init.png"
     - "/assets/shopping_tracker/recipe_gen_result.png"
 
 - title: "Products"
-  description: ""
+  icon: "🍎"
+  description: >
+    On the **Products screen**, users can view their recently used products and 
+    browse the product database using the **search bar**, which also **supports speech-to-text** functionality.
+
+
+    Users can **create new products** by providing a product name, selecting a category, 
+    and optionally setting a barcode and uploading an image. 
+    This process is shown in the second image, which depicts the product edit screen (the same as the create product screen). 
+    Initially, a **newly created product is available only within the selected household**.
+
+
+    Once all properties of a product are set, the **user can submit the product for verification** by 
+    clicking the blue arrow button in the top-right corner of the product card in the list. 
+    Verifications are **evaluated by admin users**.
+    **Verified products become available across all households, for every user** throughout the app. 
+    This feature enables the community to collaboratively build a large and diverse product database.
+
   images:
     - "/assets/shopping_tracker/product_list.png"
-    - "/assets/shopping_tracker/product_to_submit.png"
+    - "/assets/shopping_tracker/product_edit.png"
 
 - title: "Households"
-  description: ""
+  icon: "🏠"
+  description: >
+    Users can create **multiple households** to manage their different storages separately. 
+    The app includes a **navigation drawer** that displays all the households associated with the user, 
+    and new households can be created here. 
+    Switching between households is done by tapping on the desired household's card.
+
+
+    Each household has an edit screen where users can change its name and **invite others to join**. 
+    The household can also be deleted from this screen by tapping the trash icon 
+    and confirming the deletion in the confirmation dialog that appears.
+
   images:
     - "/assets/shopping_tracker/household_drawer.png"
     - "/assets/shopping_tracker/household_edit.png"
 
 - title: "Household invitation"
-  description: ""
+  icon: "✉️"
+  description: >
+    The **household owner can send invitations** to other users, generating an **in-app notification** for the invited user. 
+    The recipient can then either **accept** or **decline** the invitation. Since every user has a unique email address, 
+    sending an invitation only requires the recipient's email.
+
+
+    **Invited users** (members) of a household cannot edit or delete the household, but they can **view the members** within it. 
+    They also have the option to **leave the household** at any time.
+
   images:
     - "/assets/shopping_tracker/household_invite.png"
     - "/assets/shopping_tracker/household_info.png"
 
 - title: "Notifications"
-  description: ""
+  icon: "🔔"
+  description: >
+    In-app notifications are used to send **household invitations** and **submission evaluation responses**. 
+    The notifications screen contains three pages:
+
+      1. The first page shows all notifications, divided into two sections: **New** and **Seen**.
+      2. The second page displays only **invitations**.
+      3. The third page shows **submission results**.
+
+    **Invitations can be opened**, allowing the recipient to see who sent the invitation and either **accept** or **decline** it. 
+    If the invitation is accepted, the recipient will be added to the related household as a member.
+
+    Submission result notifications are triggered when an admin evaluates a product submission made by the user. 
+    The notification **informs the user about the admin's decision**. 
+    If the product is **accepted**, the notification can be opened, revealing the **verified product** along with its details.
+
   images:
     - "/assets/shopping_tracker/notification_list.png"
     - "/assets/shopping_tracker/invitation_details.png"
 
 - title: "Profile"
-  description: ""
+  icon: "👤"
+  description: >
+    The **Profile** screen displays the following user information:
+      - **Profile picture**: Shown only when the user is logged in with Google Auth; otherwise, it displays the app logo.
+      - **Username**
+      - **Email**
+
+    Users can also change their password if they have registered with email + password authentication. 
+    The **change password** section can be toggled open or closed by tapping on the section header. A **logout** button is also available.
+
+    In the second image, you can see the profile screen for a **guest account**. 
+    It provides options to **upgrade to a full account** or **delete the account**.
+
   images:
     - "/assets/shopping_tracker/profile.png"
     - "/assets/shopping_tracker/profile_guest.png"
 
 - title: "Settings"
-  description: ""
+  icon: "⚙️"
+  description: >
+    The **Settings** screen allows users to customize the app according to their preferences. The available options include:
+
+      - **Appearance**: Switch between **light** and **dark** modes for a more personalized visual experience.
+      - **Language**: Choose the preferred language for the app; **English**, **Spanish**, and **Hungarian** are available.
+      - **Push Notifications**: Manage push notifications. *(in development)*
+        - **Daily Summary**: Receive a daily summary of near expirations.
+        - **Item-based Reminder**: Get reminders for storage items based on their expiration dates.
+
+    These settings enable users to tailor the app to their needs, providing a more convenient and user-friendly experience.
+
   images:
     - "/assets/shopping_tracker/settings_light.png"
     - "/assets/shopping_tracker/settings_dark.png"

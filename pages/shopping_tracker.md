@@ -83,10 +83,13 @@ to log products and track stock levels, making household organization quicker an
 
 {% assign features = site.data.shopping_tracker %}
 
+{% include feature_shortcut.html features=features %}
+
 {% for feature in features %}
 {%
     include feature.html
     title=feature.title
+    icon=feature.icon
     description=feature.description
     images=feature.images
 %}
