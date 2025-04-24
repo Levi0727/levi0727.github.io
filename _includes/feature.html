@@ -3,7 +3,9 @@
         <h3>{{ include.title }}</h3>
         <p>{{ include.description }}</p>
     </div>
-    <div class="image">
-        <img src="{{ include.image }}" class="feature-image" alt="Feature Image">
+    {% for img in include.images %}
+    <div class="images">
+        <img src="{{ img }}" class="feature-image" alt="{{ include.title }} image {{ forloop.index }}">
     </div>
+    {% endfor %}
 </div>

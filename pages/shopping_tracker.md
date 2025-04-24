@@ -81,7 +81,16 @@ to log products and track stock levels, making household organization quicker an
 
 ## 📸 **Feature Showcase**
 
-In progress
+{% assign features = site.data.shopping_tracker %}
+
+{% for feature in features %}
+{%
+    include feature.html
+    title=feature.title
+    description=feature.description
+    images=feature.images
+%}
+{% endfor %}
 
 [1]: https://developer.android.com/jetpack/compose
 [2]: https://m3.material.io/

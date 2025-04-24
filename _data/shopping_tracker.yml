@@ -1,0 +1,71 @@
+- title: "Authentication"
+  description: ""
+  images:
+    - "/assets/shopping_tracker/login.png"
+    - "/assets/shopping_tracker/register.png"
+
+- title: "Shopping List"
+  description: ""
+  images:
+    - "/assets/shopping_tracker/shopping_list.png"
+    - "/assets/shopping_tracker/shopping_create.png"
+
+- title: "Storage"
+  description: ""
+  images:
+    - "/assets/shopping_tracker/storage_list.png"
+    - "/assets/shopping_tracker/storage_swipe.gif"
+
+- title: "Scanning"
+  description: ""
+  images:
+    - "/assets/shopping_tracker/scan_barcode.png"
+    - "/assets/shopping_tracker/scan_expiration.gif"
+
+- title: "Charts"
+  description: ""
+  images:
+    - "/assets/shopping_tracker/charts_category.png"
+    - "/assets/shopping_tracker/charts_expiration.png"
+
+- title: "Recipe Generator"
+  description: ""
+  images:
+    - "/assets/shopping_tracker/recipe_gen_init.png"
+    - "/assets/shopping_tracker/recipe_gen_result.png"
+
+- title: "Products"
+  description: ""
+  images:
+    - "/assets/shopping_tracker/product_list.png"
+    - "/assets/shopping_tracker/product_to_submit.png"
+
+- title: "Households"
+  description: ""
+  images:
+    - "/assets/shopping_tracker/household_drawer.png"
+    - "/assets/shopping_tracker/household_edit.png"
+
+- title: "Household invitation"
+  description: ""
+  images:
+    - "/assets/shopping_tracker/household_invite.png"
+    - "/assets/shopping_tracker/household_info.png"
+
+- title: "Notifications"
+  description: ""
+  images:
+    - "/assets/shopping_tracker/notification_list.png"
+    - "/assets/shopping_tracker/invitation_details.png"
+
+- title: "Profile"
+  description: ""
+  images:
+    - "/assets/shopping_tracker/profile.png"
+    - "/assets/shopping_tracker/profile_guest.png"
+
+- title: "Settings"
+  description: ""
+  images:
+    - "/assets/shopping_tracker/settings_light.png"
+    - "/assets/shopping_tracker/settings_dark.png"

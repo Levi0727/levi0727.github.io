@@ -29,13 +29,14 @@ tr:nth-child(even) {
 
 .feature {
   display: flex;
-  align-items: center;
+  align-items: top;
+  gap: 1.5em;
+  padding: 1em 1em 1em 2em;
   margin-bottom: 2em;
-  padding: 1em;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
   margin-right: auto;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
 }
 
 .feature .text {
@@ -53,14 +54,8 @@ tr:nth-child(even) {
   line-height: 1.5;
 }
 
-.feature .image {
-  width: 200px;
-  height: auto;
-}
-
 .feature-image {
+  max-height: 600px;
   width: 100%;
-  max-width: 100%;
   display: block;
-  border-radius: 8px;
 }
