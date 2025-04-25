@@ -12,9 +12,9 @@ title: Restaurant Manager
     color=page_data.color
 %}
 
-## ℹ️ Info
+## ℹ️ **Info**
 
-- **Duration**: 2024. September – 2024. November
+- **Duration**: 2024. September – 2024. November
 
 - **Type**: Team project for university coursework
 

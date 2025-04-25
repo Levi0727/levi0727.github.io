@@ -1,6 +1,8 @@
 ---
+
 layout: project
 title: Shopping Tracker
+
 ---
 
 {% assign page_data = site.data.shopping_tracker %}
@@ -12,9 +14,9 @@ title: Shopping Tracker
     color=page_data.color
 %}
 
-## ℹ️ Info
+## ℹ️ **Info**
 
-- **Duration**: 2024. September – Now
+- **Duration**: 2024. September – Now
 
 - **Type**: MSc Thesis
 
@@ -22,22 +24,22 @@ title: Shopping Tracker
 
 ## 📚 **Description**
 
-Shopping Tracker is a household inventory app that scans barcodes and expiration dates
+Shopping Tracker is a household inventory app that scans barcodes and expiration dates
 to log products and track stock levels, making household organization quicker and easier.
 
 ---
 
-## ⚙️ **Current Features**
+## ⚙️ **Current Features**
 
 - **Barcode and expiration‑date scanning**
 
 - **Household sharing** via in‑app invitations
 
-- Multiple sign‑in options: **guest, email + password, Google Auth**
+- Multiple sign‑in options: **guest, email + password, Google Auth**
 
 - **Charts** that visualize stored items
 
-- Localization: **English, Hungarian, Spanish**
+- Localization: **English, Hungarian, Spanish**
 
 - **Light and dark themes**
 
@@ -55,11 +57,11 @@ to log products and track stock levels, making household organization quicker an
 
 ---
 
-## 🚧 Upcoming Features
+## 🚧 **UpcomingFeatures**
 
 - **Push notifications** for upcoming expirations (in development)
 
-- **Product price tracking** (planned)
+- **Product price tracking** (planned)
 
 ---
 

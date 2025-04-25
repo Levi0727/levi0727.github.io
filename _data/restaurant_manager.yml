@@ -3,7 +3,7 @@ logo: /assets/restaurant_manager/ic_logo.png
 color: "#557C56"
 
 architecture:
-  title: Backend architecture
+  title: Backend Architecture
   icon: 📐
   description: >
     The backend architecture, built with ASP.NET Core, 
