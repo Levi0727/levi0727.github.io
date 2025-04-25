@@ -3,11 +3,13 @@ layout: project
 title: Shopping Tracker
 ---
 
+{% assign page_data = site.data.shopping_tracker %}
+
 {%
     include title.html
-    title="Shopping Tracker"
-    image="/assets/shopping_tracker/ic_logo.png"
-    color="#14919B"
+    title=page_data.name
+    image=page_data.logo
+    color=page_data.color
 %}
 
 ## ℹ️ Info
@@ -81,11 +83,9 @@ to log products and track stock levels, making household organization quicker an
 
 ## 📸 **Feature Showcase**
 
-{% assign features = site.data.shopping_tracker %}
+{% include feature_shortcut.html features=page_data.features %}
 
-{% include feature_shortcut.html features=features %}
-
-{% for feature in features %}
+{% for feature in page_data.features %}
 {%
     include feature.html
     title=feature.title
