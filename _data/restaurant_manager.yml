@@ -1,0 +1,26 @@
+name: Restaurant Manager
+logo: /assets/restaurant_manager/ic_logo.png
+color: "#557C56"
+
+architecture:
+  title: Backend architecture
+  icon: 📐
+  description: >
+    The backend architecture, built with ASP.NET Core, 
+    follows a modular layered design to support both client applications. 
+    Requests are handled by the ASP.NET Router and processed by Controllers, 
+    which delegate to the Business Logic Layer for domain-specific operations.
+
+
+    Entity Framework Core is used for data persistence, 
+    with a Data Access Layer managing interactions with an MSSQL database that stores the application's structured data.
+
+
+    Security is managed via ASP.NET Identity, Authentication, and Authorization, 
+    ensuring secure user access and role-based permissions.
+
+
+    For static and binary data, disk storage is used to manage invoice files, food images, and other resources.
+
+  image:
+    - /assets/restaurant_manager/architecture.png
