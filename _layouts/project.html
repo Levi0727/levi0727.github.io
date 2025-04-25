@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
     <style>
         html {
@@ -12,6 +13,13 @@
         body {
             width: 80%;
             margin: 30px 0px 20px 30px;
+        }
+
+        @media (max-width: 800px) {
+            body {
+                width: auto;
+                margin: 10px;
+            }
         }
     </style>
     <link rel="stylesheet" href="/assets/css/project.css">

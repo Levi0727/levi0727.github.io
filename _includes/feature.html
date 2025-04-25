@@ -5,9 +5,9 @@
         <h3>{{ include.icon }} {{ include.title }}</h3>
         <p>{{ include.description | markdownify }}</p>
     </div>
-    {% for img in include.images %}
     <div class="images">
+        {% for img in include.images %}
         <img src="{{ img }}" class="feature-image" alt="{{ include.title }} image {{ forloop.index }}">
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
