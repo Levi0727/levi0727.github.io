@@ -1,8 +1,6 @@
 ---
-
 layout: project
 title: Shopping Tracker
-
 ---
 
 {% assign page_data = site.data.shopping_tracker %}
@@ -57,7 +55,7 @@ to log products and track stock levels, making household organization quicker an
 
 ---
 
-## 🚧 **UpcomingFeatures**
+## 🚧 **Upcoming Features**
 
 - **Push notifications** for upcoming expirations (in development)
 
@@ -76,7 +74,7 @@ to log products and track stock levels, making household organization quicker an
 | **Authentication**       | Firebase Auth ([15]) · Google Credential Manager ([16])                            |
 | **Media & Graphics**     | Coil ([17]) · CameraX ([18]) · Charts-Android ([19])                               |
 | **Machine Learning**     | Google ML Kit ([20]) · Google Generative AI API ([21])                             |
-| **Background services**  | WorkManager ([22])                                                                 |
+| **Background Services**  | WorkManager ([22])                                                                 |
 | **Dependency Injection** | Hilt ([23])                                                                        |
 | **Testing**              | JUnit4 ([24]) · Espresso ([25]) · Compose UI Test ([26])                           |
 | **Analytics**            | Firebase Analytics ([27])                                                          |

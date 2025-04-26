@@ -1,0 +1,98 @@
+name: Carcassonne
+logo: /assets/board_game/ic_logo.png
+color: "#707070"
+
+features:
+  - title: Game Menu
+    icon: 🧭
+    description: >
+      In the main menu, players are presented with two options: 
+      configuring an **offline game** or setting up an **online game**.
+
+
+      In the offline **game configuration** screen, players can set up the game by selecting the number of participants.  
+      Next to the colored meeple icons, there are input fields for entering 
+      player names — the color indicates each playe's color during the game.  
+      At the bottom right, players can toggle available **expansions** and the optional farming feature.  
+      Once everything is set, the game can be started using the large button at the bottom.
+
+
+      In the online game menu, players can choose to either **host** a game or **join** one.  
+      The host must specify the server's IP address for others to connect.  
+      Each player needs to select a unique name for the session.  
+      The host also has access to the same game configuration options as in offline play.
+    images:
+      - /assets/board_game/menu.png
+
+  - title: Game Interface
+    icon: 🧩
+    description: >
+      The image shows the game right after starting, with all possible expansions enabled.
+
+
+      On the top left, there is a **table listing all players and their information**.  
+      Each row includes the player's name, the number of figures they have for different types, 
+      their current score, and the number of goods collected.
+      On the top right, the **currently active player** is displayed.
+
+
+      At the bottom of the screen, the **action bar contains** the available action buttons:
+        - The first button is used to **draw a tile**.
+        - After placing a tile, **figure placement buttons** become available, allowing the player to place a figure if they wish.
+        - The type of placement — whether on a tile feature or as a farmer — can be toggled using the button with the **grass icon**.
+        - At the end of the action bar, there is the **end turn** button.
+
+    images:
+      - /assets/board_game/game_start.png
+
+  - title: Tiles & Figures
+    icon: 🎲
+    description: >
+      In the image, the **deck** can be seen on the game board.  
+      The deck contains the player's **unused figures** and the **tiles available for drawing**.
+
+
+      The tiles with different colors represent different expansions.  
+      According to the game's rules, all tiles from **The River** expansion must be placed before other tiles, 
+      so these are positioned at the top of the deck.  
+      This visual detail helps players track how many tiles remain and plan their strategies accordingly.
+
+
+      There is also a built-in **deck movement mechanism**:  
+      If the placed tiles start to reach the deck during gameplay, 
+      the deck automatically moves away to avoid disrupting the game area.
+    images:
+      - /assets/board_game/deck.png
+
+  - title: Gameplay
+    icon: 🎮
+    description: >
+      During the game, players can **freely move the camera** around the play area using the **WASD keys** and **mouse** for rotation.
+
+
+      Drawn tiles and figures **follow the mouse** to assist with placement.  
+      Placeholder **slots** indicate all possible spots for placing tiles or figures.  
+      Tiles can be **rotated** with the **middle mouse button**, 
+      while figures **automatically rotate** when interacting with a figure slot on the tile.  
+      A drawn figure can be **returned to the deck** with the **right mouse button** if not needed.
+
+
+      The image shows a mid-game state with many tiles and figures placed.  
+      It is currently the yellow player's turn: they have already placed a tile in the bottom center and are now moving a meeple.  
+      The available placement slots for the meeple are visible on the newly placed tile.
+    images:
+      - /assets/board_game/game_progress.png
+
+  - title: Android Version
+    icon: 📱
+    description: >
+      This image illustrates the **mobile version** of the game, with all expansions disabled.
+
+
+      Without the use of a keyboard and mouse, the game mechanics differ from the desktop version:
+        - **Touching the left side** of the screen **moves the camera**, while **touching the right side rotates it**.
+        - The drawn tiles and figures **follow the center of the screen**.
+        - **Helper buttons** on the right side of the screen allow for tile and figure placement, tile rotation, and figure cancellation.
+
+    images:
+      - /assets/board_game/game_mobile.png
