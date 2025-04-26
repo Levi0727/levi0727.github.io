@@ -1,0 +1,130 @@
+name: Terra Imperium
+icon: ⚔️
+architecture:
+  title: System Architecture
+  icon: 📐
+  description: >
+    **GameCore** is responsible for handling all **game logic**, 
+    including player actions, state updates, and the enforcement of **game rules**. 
+    All other modules interact with the GameCore either directly or indirectly.
+
+
+    The **View** component represents the **two UI interfaces** built using Unity. 
+    The first one was originally created as part of the team project for **human players** to play the game locally. 
+    The second one is the user interface of the **replay system**, where users can watch previously played matches.
+
+
+    The **Resources** component contains all the necessary file resources, 
+    such as **configuration files**, **generated map files**, and **log files**. 
+    These resources are essential for both logging and loading games.
+
+
+    The **LogView** module represents the logging mechanism. 
+    At the start of a game, it saves the paths of the **configuration file** and the **selected map file**, 
+    and during gameplay, it **captures every player action** required to make the game replayable later.
+
+
+    The **Network** module represents the **game server**. 
+    It manages **connections with external AI agents**, referred to as **Clients**. During matches, 
+    it sends the current game state to the clients and receives their chosen actions. 
+    It also transmits the necessary data for AI agents to make decisions during gameplay.
+
+
+    **Clients** are external, containerized AI agents that connect to the game server via the Network module. 
+    They are platform-agnostic and only need to implement the required communication interface to participate in matches.
+
+
+    Finally, the **WebServer** component hosts a web portal where 
+    authenticated users can **upload AI agents** and **view tournament results**. 
+    It also offers administrative functionalities, allowing admins to 
+    **manage user accounts** and **configure and start tournaments**.
+
+  image: /assets/terra_imperium/simplified_architecture.png
+features:
+  - title: Game
+    icon: 🎮
+    description: >
+      This image showcases a moment from a game played by 4 players. 
+      The map is populated with various **buildings and troops**, 
+      with UI elements above them displaying their type and the player they belong to. 
+      Below the UI element, there is a health bar for each unit.
+
+
+      Troops have **unique stats**, including movement points, health points, attack damage, and attack range. 
+      Passive troops have **special abilities**: builders can construct buildings, and settlers can establish new cities.
+
+
+      Different buildings produce **various resources** and can only be placed next to a city. 
+      Troops are trained in cities, with the exception of boats, which are trained at a harbor building.
+
+
+      Both buildings and troop training **require resources** to be constructed and maintained.
+
+    images:
+      - /assets/terra_imperium/game.png
+
+  - title: Tech Tree
+    icon: 🌳
+    description: >
+      The tech tree provides various **upgrades for players**, which can be purchased using resources.
+      These techs can **unlock new buildings and troops**,
+      provide **stat upgrades** for unlocked units, and grant **additional abilities**.
+      Techs are **interdependent**, and their color indicates their level.
+      Techs that have already been learned are colored green, while the currently selected tech is highlighted in purple.
+
+      In the image, the tech tree is shown with the _Banking_ technology currently selected.
+      The **resource cost** for the selected tech is displayed in the bottom right corner.
+
+    images:
+      - /assets/terra_imperium/tech_tree.png
+
+  - title: Replay
+    icon: 🔄
+    description: >
+      The replay view uses simpler assets to present the game clearly, making it easy to follow the action.
+
+
+      At the bottom, there are buttons to control the replay.
+      There is a **discrete mode** where the user can step through the replay using the given buttons.
+      In **continuous mode**, the replay progresses automatically over time, but it can be paused at any moment.
+      The camera can be moved freely to explore the game area, just as in the main game.
+
+
+      In the image, the current action is a **move event**.
+      The **tiles on the map are highlighted** to indicate the starting and ending points of the movement.
+      There is also an **action bar** that provides detailed information about the action taking place.
+
+
+      The top bar displays the current player and their resources, similar to the main game.
+      On the right, the tech tree for the current player is shown, and it can be opened or closed using the button underneath.
+
+    images:
+      - /assets/terra_imperium/replay.png
+
+  - title: Tournament
+    icon: 🏆
+    description: >
+      On the web portal, admin users have the ability to configure tournaments.
+
+
+      There is a list containing the **uploaded AI files**, allowing the admin to select which clients will participate in the game. 
+      Next to this list, the admin can also **choose the map file** to be used during the tournament. 
+      Once selected, a **preview of the map** is displayed on the right.
+
+
+      Tournaments have two modes:
+
+      - **League Mode**: In this mode, every **AI plays against every other AI**. 
+        The **number of matches can be set**, and for each win, an AI earns one point. 
+        At the end of the tournament, the **AI with the most points is the winner**.
+
+      - **Knockout Mode**: In knockout mode, **AIs are paired up** and play against each other. 
+      The **winner progresses to the next round**, while the **loser gets eliminated**. 
+      This mode can only be started with a number of AIs that is a power of two.
+
+
+      The **number of rounds per game can also be limited** to shorten the length of the tournament. 
+      After all rounds are completed, the **game calculates a score** based on the resources collected and determines the winner.
+
+    images:
+      - /assets/terra_imperium/tournament.png
