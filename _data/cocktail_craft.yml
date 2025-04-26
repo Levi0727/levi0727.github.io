@@ -1,0 +1,74 @@
+name: Cocktail Craft
+logo: /assets/cocktail_craft/ic_logo.png
+color: "#01C0FA"
+features:
+  - title: Cocktails
+    icon: 🍸
+    description: >
+      This screen displays **10 randomly selected cocktails** to the user.
+      The list can be refreshed using **pull-to-refresh on Android**, 
+      or by clicking the refresh button at the bottom of the screen on desktop, 
+      as pull-to-refresh is not an intuitive feature for desktop users.
+      If there is no network connection, refreshing will display the last locally cached list.
+
+      At the top of the screen, there's a **search bar** that allows users to find specific cocktails by name.
+      On Android, the search bar also **supports speech-to-text** input.
+      When offline, search results are limited to the cocktails that were previously cached.
+
+    images:
+      - /assets/cocktail_craft/search_mobile.png
+      - /assets/cocktail_craft/list_desktop.png
+
+  - title: Favorites
+    icon: ⭐️
+    description: >
+      Displays a list of **cocktails marked as favorites** by the user.
+      Favorite cocktails are **fully cached locally**, 
+      allowing their detailed view to be available even without a network connection.
+
+    images:
+      - /assets/cocktail_craft/favorites_mobile.png
+
+  - title: Details
+    icon: 🔍
+    description: >
+      Displays the **detailed view of a cocktail**, including information such as 
+      category, type, tags, ingredients, and preparation instructions.
+
+
+      The top app bar features a star icon, allowing users to **mark a cocktail as a favorite**.
+      Favorited cocktails are cached locally and remain available in offline mode.
+
+
+      If there is no network connection and the data has not been cached, 
+      a placeholder message is shown, as illustrated in the second image.
+    images:
+      - /assets/cocktail_craft/details_mobile.png
+      - /assets/cocktail_craft/details_mobile_no_connection.png
+
+  - title: Adaptivity
+    icon: 🧩
+    description: >
+      The application features an **adaptive layout** that adjusts **based on the available screen size**.
+      Beyond the mobile layout, alternative designs are shown to better **utilize larger screens**, 
+      as demonstrated in the following images.
+
+
+      The first image displays the Details screen on a desktop with a narrow window.
+      Here, the cocktail image and its **details are arranged in two columns**.
+
+
+      As the window width increases, a **third column appears, showing the cocktail list** alongside the details.
+      This provides a more comfortable browsing experience, as shown in the second image.
+    images:
+      - /assets/cocktail_craft/details_desktop_narrow.png
+      - /assets/cocktail_craft/details_desktop_wide.png
+
+  - title: About
+    icon: 🧾
+    description: >
+      This screen provides general information about the application.
+      It includes a brief summary, a link to the API used, and the creator's name.
+
+    images:
+      - /assets/cocktail_craft/about_mobile.png

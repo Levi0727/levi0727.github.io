@@ -43,7 +43,7 @@ tr:nth-child(even) {
 }
 
 .feature .text {
-  flex: 1;
+  flex: 1 1 300px;
   margin-right: 1em;
   margin-left: 1em;
 }
@@ -61,6 +61,8 @@ tr:nth-child(even) {
 .feature .images {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5em;
   margin-right: auto;
   margin-left: auto;
@@ -69,7 +71,8 @@ tr:nth-child(even) {
 .feature-image {
   max-height: 600px;
   width: 100%;
-  display: block;
+  flex: 0 1;
+  object-fit: contain;
 }
 
 @media (max-width: 800px) {
