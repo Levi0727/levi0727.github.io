@@ -37,7 +37,9 @@ Currently, the game supports only the **Hungarian language**.
 - **Expansions**:
   - **The River**
   - **The Abbot**
+  - **Inns and Cathedrals**
   - **Traders and Builders**
+  - **The Princess and the Dragon**
 
 ---
 

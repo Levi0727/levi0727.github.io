@@ -49,12 +49,13 @@ features:
     icon: 🎲
     description: >
       In the image, the **deck** can be seen on the game board.  
-      The deck contains the player's **unused figures** and the **tiles available for drawing**.
+      The deck **holds all unused figures** — both player and neutral — along with the tiles **available to draw**.
 
 
       The tiles with different colors represent different expansions.  
       According to the game's rules, all tiles from **The River** expansion must be placed before other tiles, 
-      so these are positioned at the top of the deck.  
+      so these are positioned at the top of the deck.
+      The deck also features a **tile counter** above it, displaying the number of remaining tiles.  
       This visual detail helps players track how many tiles remain and plan their strategies accordingly.
 
 
