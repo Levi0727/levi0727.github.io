@@ -14,9 +14,12 @@ title: Shopping Tracker
 
 ## ℹ️ **Info**
 
-- **Duration**: 2024. September – Now
+- **Duration**: 2024. September – 2026. January
 
 - **Type**: MSc Thesis
+
+- **References**:
+  - [MSc Thesis](/assets/shopping_tracker/msc_thesis.pdf)
 
 ---
 
@@ -53,31 +56,39 @@ to log products and track stock levels, making household organization quicker an
 
 - **Local caching** for offline use
 
+- **Push notifications** for upcoming expirations
+
+- **Product price tracking** for expected expenditure calculation
+
+- **Storage history** for tracking stored items since account creation
+
+- **Storage statistics** for visualizing monthly expenses and category-based cost distribution
+
 ---
 
 ## 🚧 **Upcoming Features**
 
-- **Push notifications** for upcoming expirations (in development)
+- **Minor improvements** (in development)
 
-- **Product price tracking** (planned)
+- **Bug fixes** (in development)
 
 ---
 
 ## 💻 **Technologies**
 
-| **Category**             | **Technologies**                                                                   |
-| ------------------------ | ---------------------------------------------------------------------------------- |
-| **UI Toolkits**          | Jetpack Compose ([1]) · Material 3 ([2]) · Glance ([3]) · Lottie Compose ([4])     |
-| **Build & Language**     | Kotlin ([5]) · Gradle KTS ([6]) · KSP ([7])                                        |
-| **Data Layer**           | Room ([8]) · Jetpack DataStore ([9]) · Firebase Firestore ([10]) · Supabase ([11]) |
-| **Networking & API**     | Retrofit ([12]) · Ktor ([13]) · Kotlin Serialization ([14])                        |
-| **Authentication**       | Firebase Auth ([15]) · Google Credential Manager ([16])                            |
-| **Media & Graphics**     | Coil ([17]) · CameraX ([18]) · Charts-Android ([19])                               |
-| **Machine Learning**     | Google ML Kit ([20]) · Google Generative AI API ([21])                             |
-| **Background Services**  | WorkManager ([22])                                                                 |
-| **Dependency Injection** | Hilt ([23])                                                                        |
-| **Testing**              | JUnit4 ([24]) · Espresso ([25]) · Compose UI Test ([26])                           |
-| **Analytics**            | Firebase Analytics ([27])                                                          |
+| **Category**                | **Technologies**                                                                   |
+| --------------------------- | ---------------------------------------------------------------------------------- |
+| **UI Toolkits**             | Jetpack Compose ([1]) · Material 3 ([2]) · Glance ([3]) · Lottie Compose ([4])     |
+| **Build & Language**        | Kotlin ([5]) · Gradle KTS ([6]) · KSP ([7])                                        |
+| **Data Layer**              | Room ([8]) · Jetpack DataStore ([9]) · Firebase Firestore ([10]) · Supabase ([11]) |
+| **Networking & API**        | Retrofit ([12]) · Ktor ([13]) · Kotlin Serialization ([14])                        |
+| **Authentication**          | Firebase Auth ([15]) · Google Credential Manager ([16])                            |
+| **Media & Visualization**   | Coil ([17]) · CameraX ([18]) · Charts-Android ([19]) · Apache POI OOXML ([20])     |
+| **Machine Learning and AI** | Google ML Kit ([21]) · Firebase AI ([22])                                          |
+| **Background Services**     | WorkManager ([23])                                                                 |
+| **Dependency Injection**    | Hilt ([24])                                                                        |
+| **Testing**                 | JUnit4 ([25]) · Espresso ([26]) · Compose UI Test ([27])                           |
+| **Analytics**               | Firebase Analytics ([28])                                                          |
 
 ---
 
@@ -114,11 +125,12 @@ to log products and track stock levels, making household organization quicker an
 [17]: https://coil-kt.github.io/coil/
 [18]: https://developer.android.com/training/camerax
 [19]: https://https://github.com/dautovicharis/Charts
-[20]: https://developers.google.com/ml-kit
-[21]: https://ai.google.dev/gemini-api/docs/
-[22]: https://developer.android.com/topic/libraries/architecture/workmanager
-[23]: https://developer.android.com/training/dependency-injection/hilt-android
-[24]: https://junit.org/junit4/
-[25]: https://developer.android.com/training/testing/espresso
-[26]: https://developer.android.com/jetpack/compose/testing
-[27]: https://firebase.google.com/docs/analytics
+[20]: https://poi.apache.org/
+[21]: https://developers.google.com/ml-kit
+[22]: https://firebase.google.com/docs/ai-logic
+[23]: https://developer.android.com/topic/libraries/architecture/workmanager
+[24]: https://developer.android.com/training/dependency-injection/hilt-android
+[25]: https://junit.org/junit4/
+[26]: https://developer.android.com/training/testing/espresso
+[27]: https://developer.android.com/jetpack/compose/testing
+[28]: https://firebase.google.com/docs/analytics

@@ -38,6 +38,11 @@ features:
       This separation helps keep the interface clear and transparent. 
       Users can toggle between sections using the button at the end of the header row.
 
+
+      A summary bar at the bottom of the screen shows the **total estimated cost** of items in the *To Buy* section. 
+      Prices are calculated using the median of the most recent user-submitted entries, ensuring a realistic and up-to-date cost estimate.
+
+
       To add items, users can tap the **add button** in the bottom-right corner. Two options will appear:
 
         1. The first opens a **dialog** where users can quickly set a name and an optional quantity for the product.
@@ -61,16 +66,21 @@ features:
         - **Error**: At least one item in the section has already expired.
 
       **Items can be sorted** by name or expiration date, in either ascending or descending order, using the action bar at the top of the screen. 
-      This bar also includes buttons for opening the **charts** and adding a **new storage item**. 
-      The floating action button at the bottom center navigates to the **recipe generator screen**.
+      This bar also includes buttons for opening the **recipe generator screen** and adding a **new storage item**. 
+
+
+      At the bottom of the screen, a **modal bottom panel** provides access to additional storage-related screens:
+        - **Charts**: Visualizes the current storage items.
+        - **History**: Displays all storage items since account creation.
+        - **Reminders**: Shows active reminders set for stored items.
 
 
       Actions available on the item cards:
         - **Tap**: Opens the item details, where you can edit it.
         - **Shopping cart button**: Quickly adds the item to the shopping list.
-        - **Swipe left-to-right**: Deletes the item.
-        - **Swipe right-to-left**: Adds the item to the shopping list and deletes it.
-        - **Alarm button**: Set a custom reminder for the item, which will send a push notification. *(in development)*
+        - **Swipe left-to-right**: Removes the item from the storage list.
+        - **Swipe right-to-left**: Adds the item to the shopping list and removes it.
+        - **Alarm button**: Set a custom reminder for the item, which will send a push notification.
 
     images:
       - /assets/shopping_tracker/storage_list.png
@@ -120,6 +130,72 @@ features:
     images:
       - /assets/shopping_tracker/charts_category.png
       - /assets/shopping_tracker/charts_expiration.png
+
+  - title: History
+    icon: 📜
+    description: >
+      The **Storage History** screen provides a comprehensive overview of all items 
+      that have been added to the storage since the user's account creation. 
+      This includes both **currently stored** and previously **removed** items.
+
+
+      Users can **filter history entries** using predefined time ranges (last **3**, **7**, or **30 days**) or by selecting a **custom month**. 
+      The **total cost** of the currently displayed items is shown in a **summary bar** at the bottom of the screen.
+
+
+      The screen also supports **exporting filtered data** into table format using the **file icon button**, 
+      enabling **external analysis** and **further processing**.
+
+
+      The **chart icon button** next to the export option provides access to **storage statistics**, 
+      where users can review their storage history in a visualized form.
+
+    images:
+    - /assets/shopping_tracker/storage_history.png
+    - /assets/shopping_tracker/storage_history_export.png
+
+  - title: Statistics
+    icon: 📈
+    description: >
+      The **Storage Statistics** screen provides **visual insights** into **storage-related spending** and **item distribution**.
+
+
+      The **monthly bar chart** displays **total expenses across months** for the selected year.
+      Users can press and hold individual bars to reveal the **month name** and the **expense value**, 
+      helping track **spending changes over time**.
+
+
+      The **pie chart** shows **category-based cost distribution** for the selected month.
+      Storage items are grouped by product category, and aggregated costs are visualized proportionally.
+      A **legend** below the chart lists categories with their corresponding colors and total costs.
+      Pressing and holding a pie chart segment reveals the category's percentage contribution to the monthly total.
+
+    images:
+      - /assets/shopping_tracker/storage_statistics_bar.png
+      - /assets/shopping_tracker/storage_statistics_pie.png
+
+  - title: Reminders
+    icon: ⏰
+    description: >
+      The **Storage List** screen allows users to configure expiration reminders by tapping the alarm clock icon next to a storage item.
+
+
+      In the reminder dialog, users can configure:
+        - **How many days before expiration** the notification should be sent: 1-7 days
+        - The **notification time** with 15-minute precision
+        - **Reminder type**: one-time or recurring
+
+
+      The **Reminders** screen lists **all configured reminders** for storage items. 
+      Each entry shows the reminder type (icon-indicated) and the next notification time. 
+      Reminders **can be disabled by swiping** the list item from left to right.
+
+
+      **Reminders are delivered as push notifications**, similar to daily summary notifications.
+
+    images:
+    - /assets/shopping_tracker/storage_set_reminder.png
+    - /assets/shopping_tracker/reminders.png
 
   - title: Recipe Generator
     icon: 🍳
@@ -183,7 +259,7 @@ features:
       - /assets/shopping_tracker/household_drawer.png
       - /assets/shopping_tracker/household_edit.png
 
-  - title: Household invitation
+  - title: Household Invitation
     icon: ✉️
     description: >
       The **household owner can send invitations** to other users, generating an **in-app notification** for the invited user. 
@@ -223,7 +299,7 @@ features:
     icon: 👤
     description: >
       The **Profile** screen displays the following user information:
-        - **Profile picture**: Shown only when the user is logged in with Google Auth; otherwise, it displays the app logo.
+        - **Profile picture**: Shown only when the user is logged in with Google Auth, otherwise, it displays the app logo.
         - **Username**
         - **Email**
 
@@ -243,10 +319,9 @@ features:
       The **Settings** screen allows users to customize the app according to their preferences. The available options include:
 
         - **Appearance**: Switch between **light** and **dark** modes for a more personalized visual experience.
-        - **Language**: Choose the preferred language for the app; **English**, **Spanish**, and **Hungarian** are available.
-        - **Push Notifications**: Manage push notifications. *(in development)*
-          - **Daily Summary**: Receive a daily summary of near expirations.
-          - **Item-based Reminder**: Get reminders for storage items based on their expiration dates.
+        - **Language**: Choose the preferred language for the app, **English**, **Spanish**, and **Hungarian** are available.
+        - **Notifications**: Manage push notifications and receive a **daily summary** of expired and soon-to-expire items. 
+        Users can choose the preferred notification time (in 15-minute intervals).
 
       These settings enable users to tailor the app to their needs, providing a more convenient and user-friendly experience.
 
